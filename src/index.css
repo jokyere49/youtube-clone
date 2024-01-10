@@ -1,0 +1,109 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+text-decoration:none removes the default underline in anchor element(hyperlinks)
+*/
+a {
+  text-decoration: none;
+  color: black;
+}
+/*
+used to customize scrollbar or webkit based browsers like chrome. not available for all browsers
+*/
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+/*
+
+The CSS code you've provided is styling the appearance of the thumb (the draggable portion) 
+of the scrollbar in WebKit-based browsers (such as Chrome and Safari)
+*/
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.category-btn:hover {
+  background-color: #FC1503 !important;
+  color: white !important;
+}
+
+.category-btn:hover span{
+  color: white !important;
+}
+
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+}
+
+.search-bar{
+  border:none;
+  outline:none;
+  width:350px;
+}
+
+.category-btn{
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor:pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 15px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+/*
+    *  media query that applies a specific style to elements with the class category-btn 
+    * when the screen width is at most 900 pixels.
+*/
+@media screen and (max-width: 900px) {
+  .category-btn{
+    margin: 10px;
+  }
+}
+/*
+    *  @media screen and (max-width: 800px): This is a media query rule. 
+    It specifies that the enclosed styles should only apply when the screen width is at most 
+    #800 pixels.
+    * display: none !important;: This is the style rule applied to elements with the class .
+    copyright when the screen width is 800 pixels or less. It sets the display property to none, 
+    effectively hiding the element. The !important declaration is used to give this rule higher 
+    specificity and ensure it takes precedence over other conflicting styles.
+*/
+@media screen and (max-width:800px){
+  .copyright{
+    display:none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+
+  .react-player {
+    height: 45vh !important;
+  }
+  .search-bar{
+    width:200px;
+  }
+}
